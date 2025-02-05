@@ -1,0 +1,107 @@
+.experience-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.experience-item {
+    width: calc(33.33% - 20px); /* Adjusted to fit 3 items in a row */
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 8px;
+    transition: transform 0.3s;
+    box-sizing: border-box;
+    word-break: break-word; /* Ensures long words break to fit inside the container */
+}
+
+.experience-item h3,
+.experience-item p {
+    margin: 10px 0;
+    hyphens: auto; /* Enable automatic hyphenation */
+}
+
+.experience-item img {
+    width: 100%;
+    height: auto;
+    max-width: 150px;
+    margin-bottom: 10px;
+}
+
+.experience-item:hover {
+    transform: scale(1.05);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+    background-color: #000;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    border-radius: 8px;
+    color: #fff;
+    max-height: 80vh;
+    overflow-y: auto;
+    position: relative; /* Ensure the close button can be positioned absolutely */
+}
+
+.close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px; /* Space from the top */
+    right: 10px; /* Space from the right */
+    padding: 5px; /* Add padding to ensure text is not hidden */
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #fff;
+    text-decoration: none;
+}
+
+.experience-details-content {
+    display: none;
+}
+
+.experience-details-content.active {
+    display: block;
+}
+
+.experience-content {
+    display: none;
+}
+
+.experience-content.active {
+    display: block;
+}
+
+/* Add this media query to handle 2 experience items in a row */
+@media (max-width: 768px) {
+    .experience-item {
+        width: calc(50% - 20px); /* Adjusted to fit 2 items in a row */
+    }
+}
+
+/* Add this media query to handle 1 experience item in a row */
+@media (max-width: 480px) {
+    .experience-item {
+        width: 100%; /* Adjusted to fit 1 item in a row */
+    }
+}
