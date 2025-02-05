@@ -27,7 +27,7 @@ To run this project locally, follow these steps:
 1. **Navigate to the Project Directory**
 
    ```bash
-   cd headstarterai.github.io
+   cd Portfolio
    ```
 
 2. **Install Dependencies**
